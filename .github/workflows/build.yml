@@ -26,6 +26,9 @@ jobs:
             org.opencontainers.image.title=apollo-quick-start
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
+        with:
+          image: tonistiigi/binfmt:latest
+          platforms: all
 
       - name: Set up Docker Buildx
         id: buildx
